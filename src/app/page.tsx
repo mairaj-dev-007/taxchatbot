@@ -128,7 +128,7 @@ export default function Home() {
               <div className="text-center space-y-4">
                 <div className="relative">
                   <h2 className="text-4xl font-light text-white mb-2 tracking-wide">
-                    What's on the agenda today?
+                    {"What's on the agenda today?"}
                   </h2>
                 </div>
               </div>
