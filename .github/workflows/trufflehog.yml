@@ -1,0 +1,16 @@
+name: TruffleHog Secret Scan
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  trufflehog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run TruffleHog Secret Scan
+        run: |
+          docker run --rm -v ${{ github.workspace }}:/src trufflesecurity/trufflehog:latest git file:///src --only-verified
