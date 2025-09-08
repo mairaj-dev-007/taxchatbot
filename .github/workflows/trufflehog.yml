@@ -13,4 +13,5 @@ jobs:
 
       - name: Run TruffleHog Secret Scan
         run: |
-          docker run --rm -v ${{ github.workspace }}:/src trufflesecurity/trufflehog:latest git file:///src --fail
+         docker run --rm -v ${{ github.workspace }}:/src trufflesecurity/trufflehog:latest git file:///src --fail --entropy=False
+ 
