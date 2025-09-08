@@ -12,5 +12,5 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run TruffleHog Secret Scan
-        run: |
-          docker run --rm -v ${{ github.workspace }}:/src trufflesecurity/trufflehog:latest git file:///src --only-verified
+  run: |
+    docker run --rm -v ${{ github.workspace }}:/src trufflesecurity/trufflehog:latest git file:///src --fail
